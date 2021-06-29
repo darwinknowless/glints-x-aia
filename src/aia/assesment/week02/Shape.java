@@ -30,9 +30,9 @@ abstract class Shape {
 		this.filled = filled;
 	}
 
+	// generate toString()
 	@Override
 	public String toString() {
 		return "Shape [color=" + color + ", filled=" + filled + "]";
 	}
-
 }
