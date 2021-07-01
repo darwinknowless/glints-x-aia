@@ -1,19 +1,13 @@
 package aia.assesment.week02;
 
-// abstract Class
-abstract class Shape {
-	// declare protected attribute
-	protected String color = "red";
-	protected Boolean filled = true;
+// block class
+public abstract class Shape {
 
-	// generate constructor using field
-	public Shape(String color, Boolean filled) {
-		super();
-		this.color = color;
-		this.filled = filled;
-	}
+	// declare variable
+	private String color;
+	private boolean filled;
 
-	// generate getter and setter
+	// generate getter and setters
 	public String getColor() {
 		return color;
 	}
@@ -22,17 +16,16 @@ abstract class Shape {
 		this.color = color;
 	}
 
-	public Boolean isFilled() {
+	public boolean isFilled(Boolean filled) {
 		return filled;
-	}
+	};
 
 	public void setFilled(Boolean filled) {
 		this.filled = filled;
 	}
 
-	// generate toString()
-	@Override
-	public String toString() {
-		return "Shape [color=" + color + ", filled=" + filled + "]";
-	}
+	// abstract
+	abstract double getArea(double length);
+
+	abstract double getPerimeter(double length);
 }
